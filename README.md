@@ -53,3 +53,114 @@ Create a config.js file in api folder inside src folders. In config.js file writ
 Everyone is welcomed to contribute to this project. You can contribute either by submitting bugs or suggesting improvements by opening an issue on GitHub. Please see the [CONTRIBUTING](CONTRIBUTING.md) guidelines for more information.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Pipeline de CI/CD: Para el Proyecto, implementar un pipeline de CI/CD en Jenkins:
+
+Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: El codigo se puede ver en el archivo [Jenkins](https://github.com/evargashe/ProyectoIs2/blob/branch edwar/jenkins/Jenkins)
+```
+pipeline{
+    agent any
+    stages{
+
+        stage(" Dependencias y Sonar-Scanner")
+        {
+            steps{
+                nodejs(nodeJSInstallationName: 'nodejs'){
+                    bat "npm i && npm ci"
+                    withSonarQubeEnv('sonar')
+                    {
+                        bat "npm install sonar-scanner"
+                        bat "sonar-scanner"
+                    }
+                }
+            }
+        }
+```
+El pipeline contiene las siguientes tareas:
+### Construcción Automática:
+Este proyecto ya contaba con una contruccion automatica en [JSON](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/package.json) para JavaScript.
+```
+{
+  "name": "snapshot",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "sonar-scanner": "^3.1.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner.bat"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+```
+
+### Análisis Estático:
+Ejecutamos sonarqube desde el pipeline de Jenkins.
+- Ejecutar SonarQube localmente
+![EjecutarSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/SonarUp.JPG)
+
+- Creamos un archivode configuracion en el directorio del proyecto: [sonar-project.properties](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/sonar-project.properties)
+```
+sonar.projectKey=proyectoFinalIs2
+sonar.projectName=proyectoFinalIs2
+sonar.projectVersion=1.0-SNAPSHOT
+sonar.source=src/
+sonar.sourceEncoding=UTF-8
+sonar.host.url=http://localhost:9000
+sonar.login=060e5cda987542c8595d5e2f7f8778d818c0b35b
+sonar.exclusions=src/*.cssgit 
+sonar.javascript.lcov.reportPath=reports/js/cov.dat
+```
+
+- Instalamos sonar-scanner con el comando
+```
+npm install sonar-scanner
+```
+![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/scriptjenkinssonar.JPG)
+- Ejecutamos sonar-scanner con el comando
+```
+sonar-scanner
+```
+![ConsolaSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/consolasonarjenkins1.JPG)
+<br/>
+![ConsolaSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/consolasonarjenkins2.JPG)
+
+- Visualizar resultados de SonarScanner en SonarQube: en este [PDF](https://drive.google.com/file/d/1VEhhykfUfs77WOSKnlOkXqGUF2TgS_vU/view?usp=sharing)
+[http://localhost:9000](http://localhost:9000)
+
+![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/visualizacionsonarhost.JPG)
+
+
+
+
+
+
