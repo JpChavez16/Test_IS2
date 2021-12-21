@@ -57,7 +57,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Pipeline de CI/CD: Para el Proyecto, implementar un pipeline de CI/CD en Jenkins:
 
-Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: El codigo se puede ver en el archivo [Jenkins](https://github.com/evargashe/ProyectoIs2/blob/branch edwar/jenkins/Jenkins)
+Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: 
+<br/>
+El codigo se puede ver en el archivo [Jenkins](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/jenkins/Jenkins)
 ```
 pipeline{
     agent any
@@ -78,6 +80,7 @@ pipeline{
         }
 ```
 El pipeline contiene las siguientes tareas:
+<br/>
 ### Construcción Automática:
 Este proyecto ya contaba con una contruccion automatica en [JSON](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/package.json) para JavaScript.
 ```
@@ -122,6 +125,7 @@ Este proyecto ya contaba con una contruccion automatica en [JSON](https://github
   }
 }
 ```
+<br/>
 
 ### Análisis Estático:
 Ejecutamos sonarqube desde el pipeline de Jenkins.
@@ -140,12 +144,14 @@ sonar.login=060e5cda987542c8595d5e2f7f8778d818c0b35b
 sonar.exclusions=src/*.cssgit 
 sonar.javascript.lcov.reportPath=reports/js/cov.dat
 ```
-
+<br/>
 - Instalamos sonar-scanner con el comando
 ```
 npm install sonar-scanner
 ```
 ![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/scriptjenkinssonar.JPG)
+<br/>
+
 - Ejecutamos sonar-scanner con el comando
 ```
 sonar-scanner
@@ -153,8 +159,10 @@ sonar-scanner
 ![ConsolaSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/consolasonarjenkins1.JPG)
 <br/>
 ![ConsolaSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/consolasonarjenkins2.JPG)
+<br/>
 
 - Visualizar resultados de SonarScanner en SonarQube: en este [PDF](https://drive.google.com/file/d/1VEhhykfUfs77WOSKnlOkXqGUF2TgS_vU/view?usp=sharing)
+<br/>
 [http://localhost:9000](http://localhost:9000)
 
 ![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/visualizacionsonarhost.JPG)
