@@ -146,6 +146,7 @@ sonar.exclusions=src/*.cssgit
 sonar.javascript.lcov.reportPath=reports/js/cov.dat
 ```
 <br/>
+
 - Instalamos sonar-scanner con el comando.
 
 ```
