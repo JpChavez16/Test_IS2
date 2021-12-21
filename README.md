@@ -133,7 +133,7 @@ Ejecutamos sonarqube desde el pipeline de Jenkins.
 
 ![Imagen](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/SonarUp.JPG)
 
-- Creamos un archivode configuracion en el directorio del proyecto: [sonar-project.properties](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/sonar-project.properties)
+- Creamos un archivo de configuracion en el directorio del proyecto: [sonar-project.properties](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/sonar-project.properties)
 ```
 sonar.projectKey=proyectoFinalIs2
 sonar.projectName=proyectoFinalIs2
@@ -147,20 +147,22 @@ sonar.javascript.lcov.reportPath=reports/js/cov.dat
 ```
 <br/>
 
-- Instalamos sonar-scanner con el comando.
+- Instalamos sonar-scanner y corremos sonar-scanner con los siguientes comandos.
 
 ```
 npm install sonar-scanner
 ```
 
-![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/scriptjenkinssonar.JPG)
-<br/>
-
-- Ejecutamos sonar-scanner con el comando.
-
 ```
 sonar-scanner
 ```
+
+![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/scriptjenkinssonar.JPG)
+<br/>
+
+- Visualizamos la consola de Jenkins al ejecutar sonar-scanner.
+
+
 ![ConsolaSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/consolasonarjenkins1.JPG)
 <br/>
 ![ConsolaSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/consolasonarjenkins2.JPG)
