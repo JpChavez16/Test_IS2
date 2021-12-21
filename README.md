@@ -165,9 +165,8 @@ sonar-scanner
 <br/>
 
 - Visualizar resultados de SonarScanner en SonarQube: en este [PDF](https://drive.google.com/file/d/1VEhhykfUfs77WOSKnlOkXqGUF2TgS_vU/view?usp=sharing)
-<br/>
 [http://localhost:9000](http://localhost:9000)
-<br/>
+
 
 ![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/visualizacionsonarhost.JPG)
 
