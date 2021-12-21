@@ -130,7 +130,8 @@ Este proyecto ya contaba con una contruccion automatica en [JSON](https://github
 ## Análisis Estático:
 Ejecutamos sonarqube desde el pipeline de Jenkins.
 - Ejecutar SonarQube localmente
-<a href="url"><img src="https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/SonarUp.JPG" align="left" height="48" width="48" ></a>
+
+![Imagen](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/SonarUp.JPG)
 
 - Creamos un archivode configuracion en el directorio del proyecto: [sonar-project.properties](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/sonar-project.properties)
 ```
