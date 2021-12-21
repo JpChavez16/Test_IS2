@@ -145,14 +145,17 @@ sonar.exclusions=src/*.cssgit
 sonar.javascript.lcov.reportPath=reports/js/cov.dat
 ```
 <br/>
-- Instalamos sonar-scanner con el comando
+- Instalamos sonar-scanner con el comando.
+
 ```
 npm install sonar-scanner
 ```
+
 ![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/scriptjenkinssonar.JPG)
 <br/>
 
-- Ejecutamos sonar-scanner con el comando
+- Ejecutamos sonar-scanner con el comando.
+
 ```
 sonar-scanner
 ```
@@ -162,7 +165,6 @@ sonar-scanner
 <br/>
 
 - Visualizar resultados de SonarScanner en SonarQube: en este [PDF](https://drive.google.com/file/d/1VEhhykfUfs77WOSKnlOkXqGUF2TgS_vU/view?usp=sharing)
-<br/>
 [http://localhost:9000](http://localhost:9000)
 
 ![Sonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/visualizacionsonarhost.JPG)
