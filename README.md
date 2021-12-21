@@ -55,7 +55,7 @@ Everyone is welcomed to contribute to this project. You can contribute either by
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-## Pipeline de CI/CD: Para el Proyecto, implementar un pipeline de CI/CD en Jenkins:
+# Pipeline de CI/CD
 
 Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: 
 <br/>
@@ -81,7 +81,7 @@ pipeline{
 ```
 El pipeline contiene las siguientes tareas:
 <br/>
-### Construcción Automática:
+## Construcción Automática:
 Este proyecto ya contaba con una contruccion automatica en [JSON](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/package.json) para JavaScript.
 ```
 {
@@ -127,7 +127,7 @@ Este proyecto ya contaba con una contruccion automatica en [JSON](https://github
 ```
 <br/>
 
-### Análisis Estático:
+## Análisis Estático:
 Ejecutamos sonarqube desde el pipeline de Jenkins.
 - Ejecutar SonarQube localmente
 ![EjecutarSonar](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/SonarUp.JPG)
