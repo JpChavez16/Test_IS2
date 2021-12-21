@@ -60,6 +60,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: 
 <br/>
 El codigo se puede ver en el archivo [Jenkins](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/jenkins/Jenkins)
+
+![Image](https://github.com/evargashe/ProyectoIs2/blob/branch-edwar/imgs/pipeline.JPG)
+
 ```
 pipeline{
     agent any
